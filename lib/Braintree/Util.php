@@ -99,7 +99,8 @@ class Util
 
             switch($error["extensions"]["errorClass"]) {
             case "VALIDATION":
-                continue;
+                //continue; Would previously move onto the next for loop
+                break; //Also moves onto the next for loop because there's nothing below the switch
             case "AUTHENTICATION":
                 throw new Exception\Authentication();
                 break;
